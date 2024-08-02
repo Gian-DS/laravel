@@ -1,0 +1,174 @@
+
+//RUTA 3 --------------------------------------------------------------------------------------------------------------------------------------------------
+Route::get('ruta3/{num1}/{num2}/{num3}/', function ($num1, $num2,$num3) {
+
+    // aqui estoy convirtiendo los numeros a entero(int)
+    $num1 = (int)$num1;
+    $num2 = (int)$num2;
+    $num3 = (int)$num3;
+
+    // aqui estoy determinando la logica de las operaciones
+    $maximo = max($num1, $num2, $num3);
+    $minimo = min($num1, $num2, $num3);
+
+    if ($num1 == $num2 && $num2 == $num3) {
+        $result = "Todos los números son iguales.";
+    } else {
+        $result = "Número mayor: $max<br> Número menor: $min";
+    }
+    
+    return "<!DOCTYPE html>
+<html lang='es'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Ruta 1</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: linear-gradient(to right, #f8cdd1, #91dcd0); /* Fondo degradado */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+        .ruta3{
+            background-color: #91dcd0; 
+            height: 50%;
+            width: 50%;
+            padding: 1em; 
+            border-style: solid; 
+            color: #000000;
+            border-radius: 10%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            box-shadow: 5px 5px 5px 5px black;
+        }
+        h1 {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class='ruta3'>
+        <h1>Sus numeros son los siguientes:<br> $result <br></h1>
+    </div>
+</body>
+</html>";
+});
+//RUTA 4 --------------------------------------------------------------------------------------------------------------------------------------------------
+Route::get('ruta4/{num1}/{num2}/{num3}/{num4}', function ($num1, $num2,$num3,$num4) {
+
+    $suma = $num1 + $num2 + $num3 + $num4;
+    $resta = $num1 - $num2 -  $num3 - $num4;
+    $multiplicacion = $num1 * $num2 * $num3 * $num4;
+    $division = $num1 / $num2 / $num3 / $num4;
+
+    return "<!DOCTYPE html>
+<html lang='es'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Ruta 1</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: linear-gradient(to right, #f8cdd1, #91dcd0); /* Fondo degradado */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+        .ruta4{
+            background-color: #91dcd0; 
+            height: 50%;
+            width: 50%;
+            padding: 1em; 
+            border-style: solid; 
+            color: #000000;
+            border-radius: 10%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            box-shadow: 5px 5px 5px 5px black;
+        }
+        h1 {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class='ruta4'>
+        <h1> El resultado de la suma es: <br> $suma <br></h1>
+        <h1> El resultado de la resta es:<br> $resta <br></h1>
+        <h1> El resultado de la multiplicacion es: <br> $multiplicacion <br></h1>
+        <h1> El resultado de la division es: <br> $division <br></h1>
+    </div>
+</body>
+</html>";
+});
+
+//RUTA 5 --------------------------------------------------------------------------------------------------------------------------------------------------
+Route::get('ruta5/{}', function ($num1, $num2,$num3,$num4) {
+
+    
+
+    return "<!DOCTYPE html>
+<html lang='es'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Ruta 1</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: linear-gradient(to right, #f8cdd1, #91dcd0); /* Fondo degradado */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+        .ruta4{
+            background-color: #91dcd0; 
+            height: 50%;
+            width: 50%;
+            padding: 1em; 
+            border-style: solid; 
+            color: #000000;
+            border-radius: 10%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            box-shadow: 5px 5px 5px 5px black;
+        }
+        h1 {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class='ruta4'>
+        <h1> El resultado de la suma es: <br> $suma <br></h1>
+        <h1> El resultado de la resta es:<br> $resta <br></h1>
+        <h1> El resultado de la multiplicacion es: <br> $multiplicacion <br></h1>
+        <h1> El resultado de la division es: <br> $division <br></h1>
+    </div>
+</body>
+</html>";
+});
